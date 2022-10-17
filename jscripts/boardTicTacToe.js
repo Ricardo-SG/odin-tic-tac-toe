@@ -44,6 +44,8 @@ const gameFlow = (() => {
                 
                 if (checkWin(currentPlayer))
                 {
+                    console.log('the game has ended');
+                    console.table(board);
                     gameState = 'ended';
                     setMessage('win',currentPlayer);
                 }
@@ -63,7 +65,8 @@ const gameFlow = (() => {
     function startGame() {
 
         /* we clean the game */
-        board.fill(' ',0,8);  
+        board.fill(' ',0,9);  
+        console.table(board);
         currentTurn = 1; /* first turn */
         gameState = 'playing';
         setMessage('new');
@@ -109,9 +112,6 @@ const gameFlow = (() => {
             return false;
         }
         
-        console.log('<isCellEmpty>');
-        console.log('insideCell ->' +insideCell);
-        console.log('insideCell.innerText ->' +insideCell.innerText);
     }
 
     function addMark(cellId, mark) {
