@@ -7,9 +7,10 @@ const player2 = playerFactory('2', 'O');
 gameFlow.setPlayers(player1,player2);
 
 /* First we gonna put listeners for click in every cell of the board */
+let htmlCell; 
 for (let i=1;i<=9;i++) {
 
-    let htmlCell = document.getElementById(`cell-${i}`);
+    htmlCell = document.getElementById(`cell-${i}`);
     htmlCell.addEventListener('click', gameFlow.controlFlow);
 }
 
