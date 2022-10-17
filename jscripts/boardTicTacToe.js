@@ -1,6 +1,6 @@
 
 /* Factorial function to define the players */
-const playerFactory = (typePlayer, mark, isAMachine) => {
+const playerFactory = (typePlayer, mark) => {
     
     function getTypePlayer() {
         return this.typePlayer;
@@ -14,7 +14,7 @@ const playerFactory = (typePlayer, mark, isAMachine) => {
         return this.isAMachine;
     }
 
-    return {typePlayer, mark, isAMachine, getTypePlayer, getMark, getIsAMachine};
+    return {typePlayer, mark, getTypePlayer, getMark};
 }
 
 /* module to control the game flow */

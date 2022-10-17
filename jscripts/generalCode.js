@@ -2,8 +2,8 @@
 
 /* So it begins, the tictactoe of our time */
 /* 1) We gonna define two human players, for starters */
-const player1 = playerFactory('1', 'X', false);
-const player2 = playerFactory('2', 'O', true);
+const player1 = playerFactory('1', 'X');
+const player2 = playerFactory('2', 'O');
 gameFlow.setPlayers(player1,player2);
 
 /* First we gonna put listeners for click in every cell of the board */
